@@ -215,6 +215,9 @@ class Login
                         $_SESSION['user_name'] = $result_row->user_name;
                         $_SESSION['user_email'] = $result_row->user_email;
                         $_SESSION['user_logged_in'] = 1;
+                        //set a sesion flag that user is logged in
+                        //with cookie 
+                        $_SESSION['logged_in_with_cookie']=1;
 
                         // declare user id, set the login status to true
                         $this->user_id = $result_row->user_id;
